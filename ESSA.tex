@@ -1,0 +1,223 @@
+
+
+\documentclass[landscape,paperwidth=84in,paperheight=48in,fontscale=.199]{baposter}
+
+\usepackage[vlined]{algorithm2e}
+\usepackage{times}
+\usepackage{calc}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage{color}
+\usepackage[none]{hyphenat}
+
+\graphicspath{{images/}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Here starts the poster
+%%---------------------------------------------------------------------------
+%% Format it to your taste with the options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{poster}{
+ % Show grid to help with alignment
+ grid=false,
+ % Column spacing
+ colspacing=0.7em,
+ % Color style
+ headerColorOne=cyan!20!white!90!black,
+ borderColor=cyan!30!white!90!black,
+ % Format of textbox
+ textborder=none,
+ % Format of text header
+ headerborder=open,
+ headershape=roundedright,
+ headershade=plain,
+ background=none,
+ headerheight=0.160\textheight,
+ % Box shade
+ boxshade=none
+ }
+ 
+ % Title
+ {\sc\Huge Novel Architecture for an Epidemiological Surveillance System}
+ % Authors
+ {\\[1em]
+ {Jos\'e A. Bartolomei-D\'iaz, PhD\\
+ \textbf{\textcolor{green}{Outcome Project\\}}
+ jose.bartolomei@outcomeproject.com}}
+ % University logo
+ {
+ 
+ %%%%%% Uncomment to add logo
+%  \begin{tabular}{r}
+ %   \includegraphics[height=0.12\textheight]{}\\
+  %  \raisebox{0em}[0em][0em]%{\includegraphics[height=0.03\textheight]{msrlogo}}
+  %\end{tabular}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Now define the boxes that make up the poster
+%%%---------------------------------------------------------------------------
+%%% Each box has a name and can be placed absolutely or relatively.
+%%% The only inconvenience is that you can only specify a relative position 
+%%% towards an already declared box. So if you have a box attached to the 
+%%% bottom, one to the top and a third one which should be inbetween, you 
+%%% have to specify the top and bottom boxes before you specify the middle 
+%%% box.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \headerbox{Background}{name=Background,column=0,row=0,span=1}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \textbf{Public health surveillance is the continuous, systematic collection, analysis and interpretation of health-related data needed for the planning, implementation, and evaluation of public health practice (WHO). Eventhough, it's recognized that surveillance is vital for implementing immediate public health actions, developing and implementing programs, and formulating research hypotheses, it is hard to find surveillance systems that accomplish the goal standard system attributes. Moreover, literature review shows that surveillance reports for many diseases are non-existence.}
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \headerbox{Objective}{name=Objective,column=0,below=Background}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \textbf{The objectives of this work were:}
+     \begin{enumerate}
+     \item \textbf{propose a simple cost-effective surveillance system that meets the surveillance system attributes,}
+     \item \textbf{present proven tools and methods for analysis and report surveillance data.}
+     \end{enumerate}
+}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Methods}{name=Methods,column=0,row=3, below=Objective}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Implement code based open source computer applications and traditional point/click proprietary computer applications, and apply them to epidemiological surveillance process. Structure the process to a proposed "coherent", reproducible steps for epidemiological surveillance.  Subjectively, compare the process between the two approaches.}
+}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Materials \& Approach}{name=Materials, column=0, below=Methods}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabular}{ l l l}
+\hline\hline
+\textbf{Categories} & \textbf{Standard} & \textbf{\textcolor{green}{Code based}} \\
+\hline \textbf{Operative System} & \textbf{MS. Windows} & \textbf{\textcolor{green}{Linux/Windows}}  \\ 
+\textbf{Type Setting}             & \textbf{MS. Word}	   & \textbf{\textcolor{green}{\LaTeX}}			 \\ 
+\textbf{Spread Sheet} 		        & \textbf{MS. Excel}	& \textbf{\textcolor{green}{None}}			 \\ 
+\textbf{Presentation}		& \textbf{MS. Power Point}  	& \textbf{\textcolor{green}{\LaTeX-Beamer/R}} \\ 
+\textbf{Statistical Syst.} & \textbf{Splus/EpiInfo/SPSS}  & \textbf{\textcolor{green}{R}} \tiny \\ 
+\textbf{GIS} 				& \textbf{ArcInfo/SigEpi}   	& \textbf{\textcolor{green}{R}}   \\ 
+\textbf{Graphics}			& \textbf{MS. Excel/Power Point}  &  \textbf{\textcolor{green}{R}}  \\
+\textbf{IDE}				& \textbf{None}  			& \textbf{\textcolor{green}{RStudio / TexMaker}}  \\
+\textbf{cvs}				& \textbf{None} 				& \textbf{\textcolor{green}{Git}} \\
+\hline \textbf{Work Style}			& \textbf{Point/Click \& Copy/Paste}			& \textbf{\textcolor{green}{Codes}}   \\
+							& \textbf{Unstructured/Discontinuous} & \textbf{\textcolor{green}{Structured/Continuous}} \\
+\hline \hline
+\end{tabular}
+}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Data Process}{name=DP,column=1}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includegraphics[scale=0.55]{/media/truecrypt2/ORP/Diagram/Epi_survey_script_flow_B.pdf}
+ }
+ 
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Architecture Diagram}{name=SAD,column=2}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includegraphics[scale=0.06]{/media/truecrypt2/ORP/Diagram/AsthmaSurveiArchitec_2012.pdf}
+
+\begin{itemize}
+\item \textbf{Disease topic}
+\item \textbf{Theoretical health indicators}
+\item \textbf{Data providers}
+\item \textbf{Practical health indicators}
+\item \textbf{Covariates}
+\end{itemize}
+}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Folder and File Diagram}{name=FFD,column=2, below=SAD}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includegraphics[height=4in, width=3in]{/media/truecrypt2/ORP/Presentations/ESSA/ESSA_Folder_Diagram_B.pdf}
+}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   %\headerbox{Architecture Components}{name=Architec,column=2}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%\begin{enumerate}
+%\item Select a topic for surveillance
+%\item Review literature
+%\item Select indicators
+%\item Convene meetings with possible data providers
+%\item Memorandum of understanding with providers
+%\item Study data providers data layout
+%\item Formulate methods/formulas to create and survey selected indicators
+%\item Formulate methods/formulas to detect at risk population
+%\item Set a working directory
+%\begin{enumerate}
+
+%\item Global File
+%\begin{enumerate}
+%\item Data File
+%\begin{enumerate}
+%\item Data documentation
+%\item Data management scripts
+%\item Managed data
+%\item Raw data
+%	\end{enumerate}
+
+%\item Working File
+%	\begin{enumerate}
+%\item Analysis scripts
+%\item Figures
+%\item Report scripts
+%\end{enumerate}
+	
+%\end{enumerate}
+%\end{enumerate}
+%\item Create a diagram to visualize processes
+%\item Data Process
+	%\begin{enumerate}
+	%	\item Curate data
+	%	\item Implement epidemiological/statistical analysis and save them as R objects
+	%	\item Create a report using literate programming techniques with R and \LaTeX for a dynamic and reproducible report	
+	%\end{enumerate}
+
+%
+%\end{enumerate}
+% }
+ 
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Results}{name=Results, column=3}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \textbf{We were able to develop and implement a surveillance system architecture using data from the Behavioral Surveillance Survey that accomplished the following surveillance attributes:}
+ \begin{itemize}
+ \item \textbf{\textcolor{green}{Simplicity:} Only two computer applications are used to produce a comprehensive surveillance analysis and reporting.  Those applications are easy to implement in any desktop or server, and across platforms. No need of an IT department.}
+ \item \textbf{\textcolor{green}{Flexibility:} Computer languages can be extended to any diseases and methods. Computer scripts are test files which are relatively small taking minimum amount of hard disk space.  Used applications are cross operative system.}
+ \item \textbf{\textcolor{green}{Timeliness:} is relatively easy to create reproducible and dynamic reporting making the time of report depend only on the data provider.}
+ \item \textbf{\textcolor{green}{Stability:} Open source applications and OS's provides a very stable and flexible option (ei., Linux kernel).}
+ \item \textbf{\textcolor{green}{Acceptability:} The used tools are free, stable, scalable, flexible and arguably simple.}
+ \end{itemize}
+ }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Conclusion}{name=Conclusion, column=3, below=Results}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Code based computer applications, with the properties of literate programming, provides in a cost-effective manner the tools to develop and implement epidemiological surveillance with the attributes of simplicity, flexibility, acceptability, timeliness, and stability.  Meanwhile, proprietary softwares do not accomplished the attributes. During this process we learned and implement many software combinations. The free option of R-\LaTeX combination provides a coherent and structure tools for public health surveillance.}
+ }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \headerbox{Limitations}{name=Limitations, column=3, below=Conclusion}{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \textbf{Data generation and data quality are beyond the scope of this work.  In addition, learning a computer language require dedications and consistency.}
+ }
+ 
+\end{poster}%
+%
+\end{document}
